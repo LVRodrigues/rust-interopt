@@ -18,7 +18,8 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"ms-vscode.cpptools-extension-pack"
+				"ms-vscode.cpptools-extension-pack",
+				"fill-labs.dependi"
 			]
 		}
 	},
@@ -30,7 +31,7 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "rustc --version",
+	"postCreateCommand": "cargo install cbindgen"
 
 	// Configure tool-specific properties.
 	// "customizations": {},
