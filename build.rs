@@ -14,6 +14,7 @@ fn main() {
         .with_crate(crate_dir)
         .with_language(cbindgen::Language::Cxx)
         .with_include_guard("RUST_INTEROP_H")
+        .with_namespace("codesolver")
         .generate()
         .map_or_else(
             |error| match error {
