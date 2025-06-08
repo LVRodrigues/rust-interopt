@@ -2,6 +2,11 @@
 name = "rust-interop"
 version = "0.1.0"
 edition = "2024"
+description = "Teste de interoperabilidade com C"
+authors = [
+            "Luciano Vieira Rodrigues <luciano@codesolver.com.br>",
+            "Tiê Pereira Rodrigues <tie@codesolver.com.br>"
+        ]
 
 [lib]
 crate-type = ["cdylib", "rlib"]
