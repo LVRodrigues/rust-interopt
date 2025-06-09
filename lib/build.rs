@@ -5,10 +5,11 @@ use std::path::Path;
 
 fn main() {
     let crate_dir = env::var("CARGO_MANIFEST_DIR").unwrap();
+    let header_name = env::var("CARGO_PKG_NAME").unwrap();
     let header_path = Path::new(&crate_dir)
         .join("target")
         .join("include")
-        .join("rust-interop.h");
+        .join(format!("{}.h", header_name));
 
     cbindgen::Builder::new()
         .with_crate(crate_dir)
