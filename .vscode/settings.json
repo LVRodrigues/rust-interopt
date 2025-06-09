@@ -2,7 +2,8 @@
     "files.associations": {
         "cstring": "cpp",
         "iostream": "cpp",
-        "new": "cpp"
+        "new": "cpp",
+        "cstdlib": "cpp"
     },
-    "cmake.sourceDirectory": "/workspaces/rust-interopt/app"
+    "cmake.sourceDirectory": "/workspaces/rust-interopt"
 }
