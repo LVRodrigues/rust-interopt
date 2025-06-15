@@ -7,7 +7,6 @@ fn main() {
         .replace("-", "_")
         .to_uppercase();
     let header_path = Path::new(&crate_dir)
-        .join("target")
         .join("include")
         .join(header_name);
 
