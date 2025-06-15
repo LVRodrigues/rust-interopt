@@ -1,0 +1,15 @@
+[package]
+name = "csdemo"
+version = "0.1.0"
+edition = "2024"
+description = "Bibliteca em Rust com interoperabilidade para C."
+authors = ["Luciano Vieira Rodrigues <luciano@codesolver.com.br"]
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[build-dependencies]
+cbindgen = "0.29.0"
+
+[dependencies]
+once_cell = "1.21.3"
