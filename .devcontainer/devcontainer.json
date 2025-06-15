@@ -31,7 +31,7 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "sudo apt update; sudo apt install -y cmake; cargo install cbindgen"
+	"postCreateCommand": "sudo apt update; sudo apt install -y cmake gdb valgrind cppcheck; cargo install cbindgen"
 
 	// Configure tool-specific properties.
 	// "customizations": {},

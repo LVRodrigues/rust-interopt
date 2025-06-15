@@ -70,11 +70,10 @@ impl Default for VersionInfo {
     }
 }
 
-// use once_cell::sync::Lazy;
+use once_cell::sync::Lazy;
 
 #[unsafe(no_mangle)]
-pub extern "C" fn csdemo_version() ->  VersionInfo {
-    // static VERSION: Lazy<VersionInfo> = Lazy::new(|| VersionInfo::default());
-    // &*VERSION as *const VersionInfo
-    VersionInfo::default()
+pub extern "C" fn csdemo_version() -> *const VersionInfo {
+    static VERSION: Lazy<VersionInfo> = Lazy::new(|| VersionInfo::default());
+    &*VERSION as *const VersionInfo
 }
