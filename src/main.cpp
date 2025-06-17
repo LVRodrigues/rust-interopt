@@ -10,7 +10,7 @@ int main(int, char**){
     const Version* version = csdemo_version();
 
     std::cout << "Library.....: " << version->name << std::endl << 
-                 "version->....: " << (int) version->major << "." << (int) version->minor << "." << (int) version->patch << std::endl <<
+                 "Version.....: " << (int) version->major << "." << (int) version->minor << "." << (int) version->patch << std::endl <<
                  "Description.: " << version->description << std::endl <<
                  "Author......: " << version->author << std::endl <<
                  "System......: " << version->system << std::endl <<
@@ -33,7 +33,8 @@ int main(int, char**){
         Person *person = csdemo_person_pop();
         if (person != nullptr) {
             print_person(person);
-            free(person);
+            // free(person); It works, but it is preferable to free the pointer in the RUST layer.
+            csdemo_person_free(person);
         }
     }
     print_count();

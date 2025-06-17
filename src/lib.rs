@@ -167,3 +167,11 @@ pub extern "C" fn csdemo_person_pop() -> *mut Person {
         None => std::ptr::null_mut(),
     }
 }
+
+///
+/// Free the pointer allocated by Rust.
+/// 
+#[unsafe(no_mangle)]
+pub extern "C" fn csdemo_person_free(person: *mut Person) {
+    let _ = unsafe { Box::from_raw(person) };
+}
