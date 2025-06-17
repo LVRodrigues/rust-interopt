@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10.0)
-project(csdemo VERSION 0.1.0 LANGUAGES C CXX)
+project(csdemo VERSION 1.0.0 LANGUAGES C CXX)
 
 
 if (CMAKE_BUILD_TYPE STREQUAL "Debug")
